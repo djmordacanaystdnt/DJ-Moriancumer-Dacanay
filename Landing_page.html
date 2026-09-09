@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Philips Shaver PH - Men's Grooming Products</title>
+
+    <style>
+
+        /* GENERAL PAGE */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f8f7;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+
+        /* HEADER */
+
+        #header {
+            background-color: #002c85;
+            padding: 15px 5%;
+
+            /* Keeps the header on top */
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            /* Shadow effect */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        }
+
+
+        /* HEADER LINKS */
+
+        #header a {
+            color: white;
+            text-decoration: none;
+            margin: 8px;
+
+            transition: 0.3s;
+        }
+
+
+        /* Header hover effect */
+
+        #header a:hover {
+            color: #b8ffd8;
+            text-shadow: 0 2px 8px rgba(255,255,255,0.4);
+        }
+
+
+        /* HERO */
+
+        #home {
+            padding: 60px 20px;
+            background-color: #e7f6ef;
+        }
+
+
+        /* HERO IMAGE */
+
+        #home img {
+            max-width: 100%;
+            height: auto;
+
+            object-fit: contain;
+
+            border-radius: 10px;
+
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+            transition: 0.4s;
+        }
+
+
+        /* Hero image hover */
+
+        #home img:hover {
+            transform: scale(1.03);
+
+            box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+        }
+
+
+        /* VIEW PRODUCTS BUTTON */
+
+        #home a {
+            display: inline-block;
+
+            transition: 0.3s;
+        }
+
+
+        #home a:hover {
+            transform: translateY(-3px);
+
+            box-shadow: 0 7px 15px rgba(0,0,0,0.25);
+        }
+
+
+        /* ABOUT */
+
+        #about {
+            padding: 45px 8%;
+            background-color: white;
+        }
+
+
+        /* PRODUCTS */
+
+        #products {
+            padding: 45px 8%;
+            background-color: #f5f8f7;
+        }
+
+
+        /* PRODUCT CARDS */
+
+        #products td {
+            background-color: white;
+
+            border: 1px solid #dddddd;
+
+            padding: 25px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+
+            transition: 0.3s;
+        }
+
+
+        /* Product card hover */
+
+        #products td:hover {
+            transform: translateY(-7px);
+
+            box-shadow: 0 12px 25px rgba(0,0,0,0.20);
+        }
+
+
+        /* PRODUCT IMAGE */
+
+        #products img {
+            transition: 0.3s;
+        }
+
+
+        /* Product image zoom */
+
+        #products td:hover img {
+            transform: scale(1.08);
+        }
+
+
+        /* INQUIRE BUTTON */
+
+        #products a {
+            display: inline-block;
+
+            transition: 0.3s;
+        }
+
+
+        #products a:hover {
+            transform: translateY(-3px);
+
+            box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+        }
+
+
+        /* FEATURES */
+
+        #features {
+            padding: 45px 8%;
+            background-color: white;
+        }
+
+
+        #features td {
+            transition: 0.3s;
+        }
+
+
+        #features td:hover {
+            transform: translateY(-5px);
+
+            box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+
+            border-radius: 10px;
+        }
+
+
+        /* PRICE TABLE */
+
+        #pricing {
+            padding: 45px 8%;
+            background-color: #f5f8f7;
+        }
+
+
+        #pricing table {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.10);
+        }
+
+
+        #pricing tr:not(:first-child) {
+            transition: 0.2s;
+        }
+
+
+        #pricing tr:not(:first-child):hover {
+            background-color: #e7f6ef;
+        }
+
+
+        /* ORDER */
+
+        #order {
+            padding: 45px 8%;
+            background-color: #e7f6ef;
+        }
+
+
+        /* ORDER FORM */
+
+        #order form {
+            max-width: 650px;
+            margin: auto;
+
+            background-color: white;
+
+            padding: 30px;
+
+            border-radius: 8px;
+
+            border: 1px solid #dddddd;
+
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+
+
+        /* FORM INPUTS */
+
+        #order input[type="text"],
+        #order input[type="tel"],
+        #order input[type="email"],
+        #order input[type="number"],
+        #order select,
+        #order textarea {
+
+            box-sizing: border-box;
+
+            border: 1px solid #cccccc;
+
+            border-radius: 5px;
+
+            transition: 0.3s;
+        }
+
+
+        /* FORM INPUT HOVER */
+
+        #order input:hover,
+        #order select:hover,
+        #order textarea:hover {
+
+            border-color: #00854a;
+        }
+
+
+        /* FORM INPUT FOCUS */
+
+        #order input:focus,
+        #order select:focus,
+        #order textarea:focus {
+
+            outline: none;
+
+            border-color: #00854a;
+
+            box-shadow: 0 0 5px rgba(0,133,74,0.30);
+        }
+
+
+        /* SUBMIT BUTTON */
+
+        #order input[type="submit"],
+        #order input[type="reset"] {
+
+            transition: 0.3s;
+        }
+
+
+        #order input[type="submit"]:hover,
+        #order input[type="reset"]:hover {
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 5px 12px rgba(0,0,0,0.25);
+        }
+
+
+        /* CONTACT */
+
+        #contact {
+            padding: 40px;
+            background-color: white;
+        }
+
+
+        /* FOOTER */
+
+        #footer {
+            background-color: #00854a;
+            color: white;
+
+            padding: 20px;
+
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.15);
+        }
+
+
+        #footer a {
+            color: white;
+            text-decoration: none;
+
+            transition: 0.3s;
+        }
+
+
+        #footer a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            #header table,
+            #header tr,
+            #header td {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+
+
+            #header a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+
+            #home h1 {
+                font-size: 32px;
+            }
+
+
+            #products td {
+                display: block;
+                width: auto;
+
+                margin-bottom: 20px;
+            }
+
+
+            #features td {
+                display: block;
+                width: auto;
+
+                margin-bottom: 20px;
+            }
+
+        }
+
+    </style>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous">
+</head>
+
+
+<body>
+
+<!-- BOOTSTRAP NAVIGATION -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">MoriancumElectronics</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#shopNav" aria-controls="shopNav"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="shopNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="Landing_page.html">Shop</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="Personal_Space.html">Personal Space</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- HEADER -->
+
+<div id="header">
+
+    <table width="100%"
+           border="0"
+           style="border-collapse:collapse;">
+
+        <tr>
+
+            <td>
+
+                <h2 style="color:white; margin:0;">
+                    PHILIPS SHAVER PH
+                </h2>
+
+                <p style="color:white; margin:2px 0;">
+                    Men's Grooming Products
+                </p>
+
+            </td>
+
+
+            <td align="right">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#products">
+                    Products
+                </a>
+
+                <a href="#features">
+                    Features
+                </a>
+
+                <a href="#pricing">
+                    Prices
+                </a>
+
+                <a href="#order">
+                    Order
+                </a>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</div>
+
+
+
+<!-- HERO -->
+
+<div id="home"
+     align="center">
+
+    <p style="color:#00854a; font-weight:bold;">
+        PHILIPS MEN'S GROOMING COLLECTION
+    </p>
+
+
+    <h1 style="font-size:42px;
+               color:#222222;
+               margin:10px;">
+
+        Philips Electric Shavers
+
+    </h1>
+
+
+    <h2 style="color:#00854a;">
+        Clean. Comfortable. Confident.
+    </h2>
+
+
+    <p style="max-width:700px;
+              margin:auto;
+              font-size:18px;">
+
+        Find the right Philips electric shaver
+        for your everyday grooming needs.
+
+        Choose from different models designed
+        for comfortable and convenient shaving.
+
+    </p>
+
+
+    <br>
+
+
+    <img src="PhilipsMain.png"
+         alt="MoriancumElectronics Philips Men's Shavers"
+         width="900"
+         height="550"
+         style="max-width:100%;
+                height:auto;
+                object-fit:contain;
+                border-radius:10px;">
+
+
+    <br><br>
+
+
+    <a href="#products"
+       style="background-color:#00854a;
+              color:white;
+              padding:14px 30px;
+              text-decoration:none;
+              border-radius:5px;
+              font-weight:bold;">
+
+        VIEW PRODUCTS
+
+    </a>
+
+</div>
+
+
+
+<!-- ABOUT -->
+
+<div id="about">
+
+    <h2 style="color:#000b85;">
+        About Our Shop
+    </h2>
+
+
+    <p>
+
+        Welcome to
+        <b style="color:#0066cc;">
+            MoriancumElectronics
+        </b>,
+
+        a local online reseller established in
+        <b>2026</b>, offering Philips men's electric
+        shavers and grooming products for customers
+        in the Philippines.
+
+    </p>
+
+
+    <p>
+
+        Our goal is to make quality grooming products
+        more accessible by providing different Philips
+        shaver models at competitive reseller prices.
+
+        We want our customers to have a convenient
+        and simple way to find products that match
+        their grooming needs and budget.
+
+    </p>
+
+
+    <p>
+
+        We offer a variety of Philips shaver models,
+        from practical everyday shavers to more
+        advanced models with additional features.
+
+        Each product is selected with the needs of
+        modern men in mind, whether for daily grooming,
+        personal care, or travel.
+
+    </p>
+
+
+    <p>
+
+        At
+        <b style="color:#0066cc;">
+            MoriancumElectronics
+        </b>,
+
+        we value customer satisfaction, honest product
+        information, and reliable service.
+
+        We are committed to assisting customers before
+        and after their purchase and helping them choose
+        the right Philips shaver for their needs.
+
+    </p>
+
+
+    <p>
+
+        <b style="color:#0066cc;">
+            Established 2026 |
+            Serving Customers Across the Philippines
+        </b>
+
+    </p>
+
+</div>
+
+
+
+<!-- PRODUCTS -->
+
+<div id="products">
+
+    <h2 align="center"
+        style="color:#00854a;">
+
+        Featured Philips Shavers
+
+    </h2>
+
+
+    <table width="100%"
+           border="0"
+           cellpadding="15"
+           style="border-collapse:separate;
+                  border-spacing:15px;">
+
+        <tr>
+
+
+            <!-- PRODUCT 1 -->
+
+            <td width="33%"
+                align="center">
+
+                <img src="philips-series3000.jpg"
+                     alt="Philips Series 3000 Shaver"
+                     width="220"
+                     height="220"
+                     style="object-fit:contain;">
+
+
+                <h3 style="color:#00854a;">
+                    Philips Series 3000
+                </h3>
+
+
+                <p>
+
+                    A practical electric shaver designed
+                    for convenient everyday grooming.
+
+                </p>
+
+
+                <h3 style="color:#00854a;">
+                    Starting at ₱3,999
+                </h3>
+
+
+                <a href="#order"
+                   style="background-color:#00854a;
+                          color:white;
+                          padding:10px 20px;
+                          text-decoration:none;
+                          border-radius:5px;">
+
+                    Inquire
+
+                </a>
+
+            </td>
+
+
+
+            <!-- PRODUCT 2 -->
+
+            <td width="33%"
+                align="center">
+
+                <img src="philips-series5000.jpg"
+                     alt="Philips Series 5000 Shaver"
+                     width="220"
+                     height="220"
+                     style="object-fit:contain;">
+
+
+                <h3 style="color:#00854a;">
+                    Philips Series 5000
+                </h3>
+
+
+                <p>
+
+                    A more advanced option designed for a
+                    comfortable and efficient shaving experience.
+
+                </p>
+
+
+                <h3 style="color:#00854a;">
+                    Starting at ₱6,999
+                </h3>
+
+
+                <a href="#order"
+                   style="background-color:#00854a;
+                          color:white;
+                          padding:10px 20px;
+                          text-decoration:none;
+                          border-radius:5px;">
+
+                    Inquire
+
+                </a>
+
+            </td>
+
+
+
+            <!-- PRODUCT 3 -->
+
+            <td width="33%"
+                align="center">
+
+                <img src="philips-accessories.jpg"
+                     alt="Philips Shaver Accessories"
+                     width="220"
+                     height="220"
+                     style="object-fit:contain;">
+
+
+                <h3 style="color:#00854a;">
+                    Shaver Accessories
+                </h3>
+
+
+                <p>
+
+                    Replacement and grooming accessories
+                    for selected Philips shaver models.
+
+                </p>
+
+
+                <h3 style="color:#00854a;">
+                    Various Prices
+                </h3>
+
+
+                <a href="#order"
+                   style="background-color:#00854a;
+                          color:white;
+                          padding:10px 20px;
+                          text-decoration:none;
+                          border-radius:5px;">
+
+                    Inquire
+
+                </a>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</div>
+
+
+
+<!-- FEATURES -->
+
+<div id="features">
+
+    <h2 align="center"
+        style="color:#00854a;">
+
+        Why Choose Philips Shavers?
+
+    </h2>
+
+
+    <table width="100%"
+           border="0"
+           cellpadding="15">
+
+        <tr>
+
+
+            <td align="center"
+                width="25%">
+
+                <h1 style="color:#00854a;">
+                    ⚡
+                </h1>
+
+                <h3>
+                    Powerful Performance
+                </h3>
+
+                <p>
+
+                    Designed to provide efficient shaving
+                    for your daily grooming routine.
+
+                </p>
+
+            </td>
+
+
+            <td align="center"
+                width="25%">
+
+                <h1 style="color:#00854a;">
+                    💧
+                </h1>
+
+                <h3>
+                    Wet & Dry Options
+                </h3>
+
+                <p>
+
+                    Selected models can be used for
+                    wet or dry shaving.
+
+                </p>
+
+            </td>
+
+
+            <td align="center"
+                width="25%">
+
+                <h1 style="color:#00854a;">
+                    🔋
+                </h1>
+
+                <h3>
+                    Rechargeable
+                </h3>
+
+                <p>
+
+                    Convenient rechargeable designs
+                    for everyday use and travel.
+
+                </p>
+
+            </td>
+
+
+            <td align="center"
+                width="25%">
+
+                <h1 style="color:#00854a;">
+                    👨
+                </h1>
+
+                <h3>
+                    Men's Grooming
+                </h3>
+
+                <p>
+
+                    Made for convenient facial and
+                    personal grooming.
+
+                </p>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+</div>
+
+
+
+<!-- PRICE TABLE -->
+
+<div id="pricing">
+
+    <h2 align="center"
+        style="color:#00854a;">
+
+        Product Price Guide
+
+    </h2>
+
+
+    <table width="90%"
+           align="center"
+           border="1"
+           cellpadding="12"
+           cellspacing="0"
+           style="border-collapse:collapse;
+                  background-color:white;
+                  text-align:center;">
+
+        <tr style="background-color:#00854a;
+                   color:white;">
+
+            <th>
+                Product
+            </th>
+
+            <th>
+                Price
+            </th>
+
+            <th>
+                Availability
+            </th>
+
+        </tr>
+
+
+        <tr>
+
+            <td>
+                Philips Series 3000
+            </td>
+
+            <td>
+                ₱3,999+
+            </td>
+
+            <td>
+                Available
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>
+                Philips Series 5000
+            </td>
+
+            <td>
+                ₱6,999+
+            </td>
+
+            <td>
+                Available
+            </td>
+
+        </tr>
+
+
+        <tr>
+
+            <td>
+                Philips Shaver Accessories
+            </td>
+
+            <td>
+                ₱499+
+            </td>
+
+            <td>
+                Subject to Availability
+            </td>
+
+        </tr>
+
+    </table>
+
+
+    <p align="center"
+       style="font-size:13px;
+              color:#777777;">
+
+        *Prices shown are sample reseller prices.
+        Actual prices may vary depending on model
+        and availability.
+
+    </p>
+
+</div>
+
+
+
+<!-- ORDER FORM -->
+
+<div id="order">
+
+    <h2 align="center"
+        style="color:#00854a;">
+
+        Order or Product Inquiry
+
+    </h2>
+
+
+    <p align="center">
+
+        Fill out the form and we will contact you
+        about your order.
+
+    </p>
+
+
+    <form action="#"
+          method="post">
+
+        <fieldset style="padding:20px;">
+
+            <legend style="color:#00854a;
+                           font-weight:bold;">
+
+                Customer Information
+
+            </legend>
+
+
+            <p>
+
+                <label for="fullname">
+                    <b>Full Name:</b>
+                </label>
+
+                <br>
+
+                <input type="text"
+                       id="fullname"
+                       name="fullname"
+                       placeholder="Juan Dela Cruz"
+                       required
+                       style="width:95%;
+                              padding:10px;
+                              margin-top:5px;">
+
+            </p>
+
+
+            <p>
+
+                <label for="phone">
+                    <b>Mobile Number:</b>
+                </label>
+
+                <br>
+
+                <input type="tel"
+                       id="phone"
+                       name="phone"
+                       placeholder="09XXXXXXXXX"
+                       required
+                       style="width:95%;
+                              padding:10px;
+                              margin-top:5px;">
+
+            </p>
+
+
+            <p>
+
+                <label for="email">
+                    <b>Email:</b>
+                </label>
+
+                <br>
+
+                <input type="email"
+                       id="email"
+                       name="email"
+                       placeholder="example@gmail.com"
+                       style="width:95%;
+                              padding:10px;
+                              margin-top:5px;">
+
+            </p>
+
+
+            <p>
+
+                <label for="product">
+                    <b>Select Product:</b>
+                </label>
+
+                <br>
+
+                <select id="product"
+                        name="product"
+                        style="width:99%;
+                               padding:10px;
+                               margin-top:5px;">
+
+                    <option>
+                        Philips Series 3000
+                    </option>
+
+                    <option>
+                        Philips Series 5000
+                    </option>
+
+                    <option>
+                        Philips Shaver Accessories
+                    </option>
+
+                    <option>
+                        Other Philips Shaver
+                    </option>
+
+                </select>
+
+            </p>
+
+
+            <p>
+
+                <label for="quantity">
+                    <b>Quantity:</b>
+                </label>
+
+                <br>
+
+                <input type="number"
+                       id="quantity"
+                       name="quantity"
+                       value="1"
+                       min="1"
+                       style="width:95%;
+                              padding:10px;
+                              margin-top:5px;">
+
+            </p>
+
+
+            <p>
+
+                <label for="location">
+                    <b>Delivery Location:</b>
+                </label>
+
+                <br>
+
+                <input type="text"
+                       id="location"
+                       name="location"
+                       placeholder="Barangay / Street/ City / Province"
+                       required
+                       style="width:95%;
+                              padding:10px;
+                              margin-top:5px;">
+
+            </p>
+
+
+            <p>
+
+                <label for="payment">
+                    <b>Payment Method:</b>
+                </label>
+
+                <br>
+
+                <select id="payment"
+                        name="payment"
+                        style="width:99%;
+                               padding:10px;
+                               margin-top:5px;">
+
+                    <option>
+                        MariBank
+                    </option>
+
+                    <option>
+                        Cash on Delivery
+                    </option>
+
+                    <option>
+                        Bank Transfer
+                    </option>
+
+                </select>
+
+            </p>
+
+
+            <p>
+
+                <label for="message">
+                    <b>Message:</b>
+                </label>
+
+                <br>
+
+                <textarea id="message"
+                          name="message"
+                          rows="5"
+                          placeholder="Write your inquiry here..."
+                          style="width:95%;
+                                 padding:10px;
+                                 margin-top:5px;"></textarea>
+
+            </p>
+
+        </fieldset>
+
+
+        <p align="center">
+
+            <input type="submit"
+                   value="SUBMIT ORDER"
+                   style="background-color:#00854a;
+                          color:white;
+                          border:none;
+                          padding:13px 25px;
+                          border-radius:5px;
+                          cursor:pointer;
+                          font-weight:bold;">
+
+
+            <input type="reset"
+                   value="CLEAR"
+                   style="background-color:#777777;
+                          color:white;
+                          border:none;
+                          padding:13px 25px;
+                          border-radius:5px;
+                          cursor:pointer;">
+
+        </p>
+
+    </form>
+
+</div>
+
+
+
+<!-- CONTACT -->
+
+<div id="contact"
+     align="center">
+
+    <h2 style="color:#00854a;">
+        Contact Us
+    </h2>
+
+
+    <p>
+
+        Have questions about a Philips shaver?
+
+        Send us a message and we will be happy
+        to assist you.
+
+    </p>
+
+
+    <p>
+
+        <b>📱 Messenger:</b>
+        MoriancumElectronics Philips-Shaver PH
+
+        <br>
+
+        <b>📞 Mobile:</b>
+        0927-6978-9852
+
+        <br>
+
+        <b>📧 Email:</b>
+        MoriancumElectronicsphilips@gmail.com
+
+    </p>
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+<div id="footer"
+     align="center">
+
+    <p>
+
+        &copy; 2026 MoriancumElectronics
+        Philips Shaver PH.
+        All Rights Reserved.
+
+    </p>
+
+
+    <p style="font-size:12px;">
+
+        Independent reseller.
+        Not an official Philips website.
+
+    </p>
+
+
+    <a href="#home"
+       style="color:white;
+              text-decoration:none;">
+
+        Back to Top ↑
+
+    </a>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrVJcXK/BmnVDxM+D2scQbITxI"
+  crossorigin="anonymous"></script>
+</body>
+
+</html>
